@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+
+
+    <script>
+        // Write a script that takes the user n values and returns their sum, 
+        // stop receiving values from user when he enters 0 or sum exceeds 100, 
+        // check that the entered data is numeric and inform the user with the total sum of the entered values.
+/*
+        var sum = 0;
+        while (true){
+            var input = prompt ("Enter Your numbers ");
+
+            var number = parseFloat(input);
+            if (isNaN(number)){
+                alert("Invalid input");
+                continue;
+            }
+
+            sum += number;
+
+            if(number === 0 || sum > 100){
+                break;
+            }
+        }
+        alert("Total number is " + sum);
+*/
+
+//==============================================================================
+
+        // Write a script that accepts a string from user through prompt 
+        // and count the number of 'e' characters in it
+/*
+        var str = prompt("Enter your String ");
+        str = str.toLowerCase();
+
+        var count = 0;
+
+        for(var i = 0; i<str.length; i++){
+            if (str[i] === 'e'){
+                count++;
+            }
+        }
+
+        alert("The count of 'e' = " + count);
+*/
+
+//==============================================================================
+
+        // Fill an array of 3 elements from the user, and apply each of the following 
+        // mathematical operations on it (+, *, /). Format the output as shown in fig.
+/*
+        var arr = [];
+        for (var i=1; i<= 3; i++){
+            var input = prompt("Enter your number "+ i);
+
+            var intNum = parseFloat(input);
+            arr.push(intNum);
+        
+        }
+
+        function add (arr){
+            return arr[0] + arr[1] + arr[2];
+        }
+
+        function multi (arr){
+            return arr[0] * arr[1] * arr[2];
+        }
+
+        function divid (arr){
+            if (arr[0] == 0 || arr[1] == 0){
+                return "Not Allowed";
+            }
+            return arr[0] / arr[1] / arr[2];
+        }
+
+        alert("The adding of your input is = " + add(arr) + "\n" + 
+            "The Multiplying of your input is = " + multi(arr) + "\n"  +
+            "The dividing of your input is = " + divid(arr) + "\n");
+*/
+
+//==============================================================================
+        
+        // create a function that accepts only 2 and throw exception if number of 
+        // parameters either less than or exceeds 2 parameters.
+/*
+        function checkParameters(...args){
+            if (args.length != 2){
+                throw new Error("The function only accepts 2 parameters");
+            }
+            return console.log(args);
+        }
+        checkParameters(1,2);    // print in console
+        checkParameters(1);      // not print 
+        checkParameters(1,2,3);  // not print 
+*/
+
+//==============================================================================
+
+        // Write your own function that can add n values ensure that all passing
+        // parameters are numerical values only 
+/*
+        function addNum(...args) {
+    for (const arg of args) {
+        if (typeof arg !== 'number' || isNaN(arg)) {
+            throw new Error("All parameters must be numerical values.");
+        }
+    }
+
+    return args.reduce((sum, num) => sum + num, 0);
+}
+
+try {
+    console.log(addNum(1, 2, 3, 4));  // Outputs: 10
+} catch (error) {
+    console.error(error.message);
+}
+*/
+
+//==============================================================================
+
+        // Write a function that takes any numbers of parameters and returns them 
+        // reversed using array's reverse function. 
+
+/*
+        function reverseParameters(...args){
+            return args.reverse();
+        }
+
+        console.log(reverseParameters(1,2,3,4)); // [4,3,2,1]
+*/
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

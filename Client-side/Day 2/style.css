@@ -1,0 +1,27 @@
+body{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+table,th, td {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+
+caption{
+    font-weight: 600;
+    font-size: 22px;
+    color: rgb(214, 26, 26);
+    border-bottom: 2px rgb(214, 26, 26) solid;
+    margin-bottom: 25px;
+    padding-bottom: 7px;
+}
+label , .label{
+    color: black;
+    font-size: 18px;
+}
+
+td, input{
+    padding: 5px;
+}

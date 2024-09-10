@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+<body>
+<form id="registrationForm" method="get" action="server.html">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <span id="name-err"></span><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <span id="email-err"></span><br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <span id="gender-err"></span><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone">
+    <span id="phone-err"></span><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    let isValid = true;
+
+    const validationRules = {
+        name: {
+            pattern: /^[a-zA-Z]{5,8}$/,
+            errorMsg: 'Please enter a valid name (5-8 letters)',
+            element: 'name-err'
+        },
+        email: {
+            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+            errorMsg: 'Please enter a valid email',
+            element: 'email-err'
+        },
+        phone: {
+            pattern: /^(011|012|015)\d{8}$/,
+            errorMsg: 'Please enter a valid phone number (011, 012, or 015 followed by 8 digits)',
+            element: 'phone-err'
+        },
+        gender: {
+            validate: () => document.querySelector('input[name="gender"]:checked') !== null,
+            errorMsg: 'Please select a gender',
+            element: 'gender-err'
+        }
+    };
+
+    for (const key in validationRules) {
+        const rule = validationRules[key];
+        let field = document.getElementById(key);
+
+        if (rule.pattern && !rule.pattern.test(field.value)) {
+            document.getElementById(rule.element).innerText = rule.errorMsg;
+            document.getElementById(rule.element).style.color = 'red';
+            isValid = false;
+        } else if (rule.validate && !rule.validate()) {
+            document.getElementById(rule.element).innerText = rule.errorMsg;
+            document.getElementById(rule.element).style.color = 'red';
+            isValid = false;
+        } else {
+            document.getElementById(rule.element).innerText = '';
+        }
+    }
+
+    if (!isValid) {
+        e.preventDefault();
+    }
+});
+</script>
+</body>
+</html>

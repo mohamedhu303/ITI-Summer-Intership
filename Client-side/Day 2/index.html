@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form action="#" method="POST">
+        <table>
+            <caption>Registration Form</caption>
+            <tr>
+                <td><label for="fname">First Name</label></td>
+                <td><input type="text" id="fname" name="first-name" placeholder="Enter your first name" autofocus required></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name</label></td>
+                <td><input type="text" id="lname" name="last-name" placeholder="Enter your last name" required></td>
+            </tr>
+            <tr>
+                <td><label for="uname">User Name</label></td>
+                <td><input type="text" id="uname" name="user-name" placeholder="Enter your user name" required></td>
+            </tr>
+            <tr>
+                <td><label for="pass">Password</label></td>
+                <td><input type="password" id="pass" name="password" placeholder="Enter your password" required minlength="8" maxlength="20"></td>
+            </tr>
+            <tr>
+                <td><label for="tracks">Track</label></td>
+                <td>
+                    <input list="tracks" name="tracks" id="tracks-input">
+                    <datalist id="tracks">
+                        <option value="AI">
+                        <option value="DA">
+                        <option value="IT">
+                        <option value="CS">
+                        <option value="DS">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Favorites</td>
+                <td>
+                    <div class="favorites">
+                        <input type="checkbox" id="fav-football" name="favorites" value="Football">
+                        <label for="fav-football">Football</label>
+
+                        <input type="checkbox" id="fav-basketball" name="favorites" value="Basketball">
+                        <label for="fav-basketball">Basketball</label>
+
+                        <input type="checkbox" id="fav-games" name="favorites" value="Games">
+                        <label for="fav-games">Games</label><br>
+
+                        <input type="checkbox" id="fav-reading" name="favorites" value="Reading">
+                        <label for="fav-reading">Reading</label>
+
+                        <input type="checkbox" id="fav-swimming" name="favorites" value="Swimming">
+                        <label for="fav-swimming">Swimming</label>
+
+                        <input type="checkbox" id="fav-travel" name="favorites" value="Travel">
+                        <label for="fav-travel">Travel</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Description</td>
+                <td>
+                    <textarea name="message" id="message" placeholder="Write your Message..." rows="7" cols="60"></textarea>
+                </td>
+            </tr>
+            <tr class="footer">
+                <th colspan="2">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

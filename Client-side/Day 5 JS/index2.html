@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+var fly = prompt("Do you fly? ").toLowerCase();
+if (fly === "yes") {
+    var wild = prompt("Are you wild? ").toLowerCase();
+    if (wild === "yes") {
+        alert("Eagle");
+    } else if (wild === "no") {
+        alert("Parrot");
+    } else {
+        alert("Invalid");
+    }
+} else if (fly === "no") {
+    var water = prompt("Do you live under the water? ").toLowerCase();
+    if (water === "yes") {
+        var wild = prompt("Are you wild? ").toLowerCase();
+        if (wild === "yes") {
+            alert("Shark");
+        } else if (wild === "no") {
+            alert("Dolphin");
+        } else {
+            alert("Invalid");
+        }
+    } else if (water === "no") {
+        var wild = prompt("Are you wild? ").toLowerCase();
+        if (wild === "yes") {
+            alert("Lion");
+        } else if (wild === "no") {
+            alert("Cat");
+        } else {
+            alert("Invalid");
+        }
+    } else {
+        alert("Invalid");
+    }
+} else {
+    alert("Please enter 'yes' or 'no'");
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

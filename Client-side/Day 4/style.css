@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+/* Header styling */
+header{
+    background-color: red;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+}
+
+header h1{
+    color: black;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* section styling */
+section{
+    width: 100%;
+    display: flex;
+
+}
+/* Side Styling */
+.side{
+    width: 30%;
+    background-color: gray;
+    padding-bottom: 15px;
+}
+
+form{
+    border: 3px black dashed;
+    padding:10px;
+}
+
+form > input:first-of-type{
+    background-color: yellow;
+}
+
+input{
+    border: 0;
+    margin-bottom: 10px;
+}
+
+input[type="Submit"]{
+    padding: 3px;
+    font-size: 16px;
+}
+
+
+.side h1{
+    margin: 15px 0;
+}
+
+li a{
+    color: red;
+    background-color: pink;
+    margin-left: 10%;
+}
+
+
+/* Landing */
+
+.land{
+    background-color: pink;
+    padding: 20px 5px;
+    height: fit-content;
+}
+
+.land > h1{
+    padding-bottom: 20px;
+}
+
+.land p{
+    color: red;
+}
+
+.land ul{
+    display: flex;
+    margin-top: 10px;
+}
+
+.land ul li{
+    border: 2px black solid;
+    padding: 3px;
+}

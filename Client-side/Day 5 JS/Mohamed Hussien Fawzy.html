@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function num (num){
+            if (num%3 == 0 && num%5 ==0){
+                console.log("Fizz buzz");
+            }
+            else if (num%3 == 0){
+                console.log("The number divided by 3");
+            }
+            else if (num%5 == 0){
+                console.log("The number divided by 5");
+            }
+            else {
+                console.log("none");
+            }
+        };
+
+        console.log(num(5));
+        console.log(num(15));
+        console.log(num(3));
+        console.log(num(1));
+        console.log(num(74));
+        console.log(num(6));
+        console.log(num(8));
+    </script>
+
+
+<script>
+    var fly = prompt("Do you fly? ").toLowerCase();
+    if (fly === "yes") {
+        var wild = prompt("Are you wild? ").toLowerCase();
+        if (wild === "yes") {
+            alert("Eagle");
+        } else if (wild === "no") {
+            alert("Parrot");
+        } else {
+            alert("Invalid");
+        }
+    } else if (fly === "no") {
+        var water = prompt("Do you live under the water? ").toLowerCase();
+        if (water === "yes") {
+            var wild = prompt("Are you wild? ").toLowerCase();
+            if (wild === "yes") {
+                alert("Shark");
+            } else if (wild === "no") {
+                alert("Dolphin");
+            } else {
+                alert("Invalid");
+            }
+        } else if (water === "no") {
+            var wild = prompt("Are you wild? ").toLowerCase();
+            if (wild === "yes") {
+                alert("Lion");
+            } else if (wild === "no") {
+                alert("Cat");
+            } else {
+                alert("Invalid");
+            }
+        } else {
+            alert("Invalid");
+        }
+    } else {
+        alert("Please enter 'yes' or 'no'");
+    }
+    
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

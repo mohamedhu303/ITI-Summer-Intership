@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form validation</title>
+</head>
+<body>
+<form method="get" action="server.html">
+    <label for="name">Name</label>
+    <input type="text" id="name">
+    <span id="name-err"></span>
+    <label for="email">Email</label>
+    <input type="text" id="email">
+<!--    gender & phone number-->
+    <input type="submit" value="register">
+</form>
+<script>
+    //exec()  test()   match()
+    var form = document.querySelector('form');
+    var txtInput = document.querySelector('input[type="text"]')
+    var nameErr = document.getElementById('name-err')
+    var pattern = /^[a-z]{5,8}$/
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        if (txtInput.value === '' || !(txtInput.value.match(pattern))) {
+            nameErr.innerText = 'Please enter a valid name'
+            nameErr.style.color = 'red'
+            nameErr.style.display = 'block'
+            txtInput.focus()
+            txtInput.select()
+        } else {
+            nameErr.innerText = ''
+            nameErr.style.display = 'inline'
+        }
+    })
+</script>
+</body>
+</html>
