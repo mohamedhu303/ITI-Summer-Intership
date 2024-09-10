@@ -1,0 +1,6 @@
+Lap 1
+———-
+1- Install xamp (Apache - php - MySQLi ).
+2- test that php is working.
+3- create a php page with registration form.
+4- submit form and print all values using php.

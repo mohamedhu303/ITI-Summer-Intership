@@ -1,0 +1,144 @@
+
+body{
+    margin: 10px;
+}
+h3{
+    font-weight: 600;
+}
+span{
+    font-weight: 300;
+    background-color: gray;
+    padding : 8px 10px;
+    border-radius: 999px;
+}
+a{
+    text-decoration: none;
+    border: 0;
+}
+button{
+    background-color: #af4444;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius :70px;
+    border: #af4444 2px solid;
+    color: white;
+    font-size: 20px;
+}
+button:hover{
+    color: #8e3e3e;
+    background-color: white;
+    transition: ease 1s;
+}    
+    
+    
+    
+    
+    
+    /* Global Styles */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+    
+    form {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Form Elements */
+    
+    label {
+        /* display: block; */
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 25px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="radio"] {
+        margin: 10px;
+        display: inline;
+    }
+    
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    input[type="submit"]{
+        background-color: #4CAF50;
+    }
+    
+    input[type="reset"]{
+        background-color: #af4c4c;
+    }
+    input[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+
+    input[type="reset"]:hover{
+        background-color: #8e3e3e;
+
+    }
+    
+    /* Name Section */
+    
+    .name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    
+    .fname,
+    .lname {
+        flex-basis: 45%;
+    }
+    
+    .fname label,
+    .lname label {
+        margin-bottom: 5px;
+    }
+    
+    .fname input,
+    .lname input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+
+    /* Style of submit page */
